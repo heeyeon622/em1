@@ -1,53 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EM ONE ACADEMY | 이엠원 학원</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #0077cc;
-            color: white;
-            padding: 20px;
-        }
-        img {
-            max-width: 200px;
-            margin-top: 20px;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            margin-top: 30px;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EM ONE ACADEMY | 이엠원 학원</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta name="description" content="이엠원 학원 · 국어 영어 수학 과학 맞춤 관리 · 평택 소사벌 본관/분관"/>
+  <link rel="icon" type="image/png" href="logo1.jpg" />
+  <style> html{scroll-behavior:smooth} .chip{ @apply px-4 py-2 rounded-2xl text-sm border;} .chip-active{ @apply bg-sky-600 text-white border-sky-600;} </style>
 </head>
-<body>
-    <header>
-        <h1>EM ONE ACADEMY</h1>
-        <p>이엠원 학원 | Sosabeol, Pyeongtaek</p>
-    </header>
-
-    <!-- 로고 -->
-    <img src="logo1.jpg" alt="이엠원 로고">
-
-    <main>
-        <h2>환영합니다!</h2>
-        <p>이엠원 학원 공식 홈페이지입니다.</p>
-    </main>
-
-    <footer>
-        &copy; 2025 EM ONE ACADEMY. All rights reserved.
-    </footer>
-</body>
+<body class="bg-gradient-to-b from-sky-50 to-white text-slate-800">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="logo1.jpg" alt="EM ONE ACADEMY" class="w-10 h-10 rounded-full object-cover" />
+        <div class="leading-tight">
+          <div class="text-xl font-extrabold">EM ONE ACADEMY</div>
+          <div class="text-xs text-slate-500">이엠원 학원 · Sosabeol, Pyeongtaek</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#about" class="hover:text-sky-700">학원소개</a>
+        <a href="#programs" class="hover:text-sky-700">과정안내</a>
+        <a href="#admission" class="hover:text-sky-700">입학·상담</a>
+        <a href="#location" class="hover:text-sky-700">오시는길</a>
+      </nav>
+      <div class="flex gap-2">
+        <a href="https://pf.kakao.com/_your_kakao_channel" target="_blank" class="inline-flex items-center justify-center px-4 py-2 rounded-2xl bg-yellow-400 text-black text-sm font-bold">카카오채널</a>
+        <a href="https://booking.naver.com/your_naver_booking" target="_blank" class="inline-flex items-center justify-center px-4 py-2 rounded-2xl bg-green-500 text-white text-sm font-bold">네이버예약</a>
+        <a href="#admission" class="inline-flex items-center justify-center px-4 py-2 rounded-2xl bg-sky-600 text-white text-sm">상담 문의</a>
+      </div>
+    </div>
+  </header>  <!-- 나머지 코드는 동일 --></body>
 </html>
