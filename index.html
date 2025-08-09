@@ -1,38 +1,165 @@
-<!doctype html>
+<!-- ===== EM ONE ACADEMY | Main + Admission (Drop-in) ===== -->
+<style>
+  :root{
+    --em1-brand:#2563eb;    /* 포인트 */
+    --em1-muted:#f1f5f9;    /* 연한 배경 */
+    --em1-text:#0f172a;     /* 본문 */
+    --em1-sub:#475569;      /* 보조 텍스트 */
+    --em1-border:#e2e8f0;   /* 경계선 */
+  }
+  *{box-sizing:border-box}
+  .em1-wrap{max-width:1080px;margin:0 auto;padding:40px 20px;font-family:'Noto Sans KR',system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  .em1-title{font-size:28px;line-height:1.2;margin:0 0 18px;font-weight:800;color:var(--em1-text)}
+  .em1-subtxt{margin-top:-6px;color:var(--em1-sub);font-size:14px}
+  .em1-grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+  .em1-card{background:#fff;border:1px solid var(--em1-border);border-radius:16px;padding:20px}
+  .em1-card h3{margin:0 0 6px;font-size:18px;color:var(--em1-brand)}
+  .em1-card p{margin:6px 0 0;font-size:15px;color:var(--em1-sub);line-height:1.55}
+  .em1-bullets{margin:8px 0 0;padding-left:18px;color:var(--em1-sub);font-size:14px}
+  .em1-cta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+  .em1-btn{display:inline-block;padding:12px 18px;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid var(--em1-border);background:#fff;color:var(--em1-text)}
+  .em1-btn.kakao{background:#fee500;border-color:#fee500;color:#111}
+  .em1-btn.naver{background:#03c75a;border-color:#03c75a;color:#fff}
+  .em1-note{margin-top:14px;background:var(--em1-muted);border:1px solid var(--em1-border);border-radius:12px;padding:12px;color:var(--em1-sub);font-size:13px}
+  @media (max-width:900px){.em1-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:640px){.em1-grid{grid-template-columns:1fr}.em1-title{font-size:22px}}
+  /* HERO */
+  .em1-hero{width:100%;border-radius:18px;padding:40px 24px;min-height:240px;display:flex;align-items:center;
+            background:linear-gradient(180deg, rgba(37,99,235,.08), rgba(37,99,235,0)), url('HERO_IMAGE_URL') center/cover no-repeat;}
+  .em1-hero h1{margin:0 0 8px;font-size:28px;line-height:1.25;color:var(--em1-text);font-weight:800}
+  .em1-hero p{margin:0 0 16px;color:var(--em1-sub);font-size:16px}
+</style>
 
-<html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EM ONE ACADEMY | 이엠원 학원</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <meta name="description" content="이엠원 학원 · 국어 영어 수학 과학 맞춤 관리 · 평택 소사벌 본관(초등관)/분관(중고등관)"/>
-  <link rel="icon" type="image/png" href="logo1.jpg" />
-  <style> html{scroll-behavior:smooth} .chip{ @apply px-4 py-2 rounded-2xl text-sm border;} .chip-active{ @apply bg-sky-600 text-white border-sky-600;} </style>
-</head>
-<body class="bg-gradient-to-b from-sky-50 to-white text-slate-800">
-  <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#top" class="flex items-center gap-3">
-        <img src="logo1.jpg" alt="EM ONE ACADEMY" class="w-10 h-10 rounded-full object-cover" />
-        <div class="leading-tight">
-          <div class="text-xl font-extrabold">EM ONE ACADEMY</div>
-          <div class="text-xs text-slate-500">본관: 이엠원학원 (초등관) · 분관: 이엠원국영수학원 (중고등관)</div>
-        </div>
-      </a>
-      <nav class="hidden md:flex gap-6 text-sm">
-        <a href="#about" class="hover:text-sky-700">학원소개</a>
-        <a href="#programs" class="hover:text-sky-700">과정안내</a>
-        <a href="#admission" class="hover:text-sky-700">입학·상담</a>
-        <a href="#location" class="hover:text-sky-700">오시는길</a>
-      </nav>
-      <div class="flex gap-2">
-        <a href="https://pf.kakao.com/_your_kakao_channel" target="_blank" class="inline-flex items-center justify-center px-4 py-2 rounded-2xl bg-yellow-400 text-black text-sm font-bold">카카오채널</a>
-        <a href="https://booking.naver.com/your_naver_booking" target="_blank" class="inline-flex items-center justify-center px-4 py-2 rounded-2xl bg-green-500 text-white text-sm font-bold">네이버예약</a>
-        <a href="#admission" class="inline-flex items-center justify-center px-4 py-2 rounded-2xl bg-sky-600 text-white text-sm">상담 문의</a>
+<!-- ===== Main Hero ===== -->
+<section class="em1-wrap">
+  <div class="em1-hero">
+    <div>
+      <h1>맞춤형 교육 · 수준별 수업 · 성적 향상</h1>
+      <p>EM ONE ACADEMY (본관: 초등 / 분관: 중·고) — 정기 진단 · 1:1 상담 · 체계적 성적관리</p>
+      <div class="em1-cta">
+        <a class="em1-btn kakao" href="https://pf.kakao.com/_YOUR_CHANNEL" target="_blank" rel="noopener">카카오채널</a>
+        <a class="em1-btn naver" href="https://booking.naver.com/your_link" target="_blank" rel="noopener">네이버 예약</a>
+        <a class="em1-btn" href="/contact">상담 문의</a>
       </div>
     </div>
-  </header>  <!-- 나머지 코드는 동일 --></body>
-</html>
+  </div>
+</section>
+
+<!-- ===== 강점 3가지 ===== -->
+<section class="em1-wrap">
+  <h2 class="em1-title">EM ONE ACADEMY는 이렇게 다릅니다</h2>
+  <div class="em1-grid">
+    <div class="em1-card">
+      <h3>수준별 맞춤 수업</h3>
+      <p>학습진단 → 개별 커리큘럼 → 주간 점검으로 성적 향상 루프 구축</p>
+    </div>
+    <div class="em1-card">
+      <h3>전문 강사진</h3>
+      <p>국·영·수·과 전임 강사와 담임 시스템, 개별 약점 보완 코칭</p>
+    </div>
+    <div class="em1-card">
+      <h3>학부모 소통</h3>
+      <p>월간 리포트 · 상담 리마인드 · 카카오 채널 공지로 투명한 진행</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 과목 / 프로그램 ===== -->
+<section class="em1-wrap">
+  <h2 class="em1-title">과목 및 프로그램</h2>
+  <div class="em1-card">
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <span class="em1-btn" style="border-radius:20px">국어</span>
+      <span class="em1-btn" style="border-radius:20px">영어</span>
+      <span class="em1-btn" style="border-radius:20px">수학</span>
+      <span class="em1-btn" style="border-radius:20px">과학</span>
+      <span class="em1-btn" style="border-radius:20px">초등 심화/기초반</span>
+      <span class="em1-btn" style="border-radius:20px">중등 내신 관리</span>
+      <span class="em1-btn" style="border-radius:20px">고등 수능/내신</span>
+    </div>
+    <a class="em1-btn" href="/programs" style="margin-top:12px">자세히 보기</a>
+  </div>
+</section>
+
+<!-- ===== 공지 ===== -->
+<section class="em1-wrap">
+  <h2 class="em1-title">공지사항</h2>
+  <div class="em1-card">
+    <ul style="list-style:none;margin:0;padding:0">
+      <li style="padding:12px 0;border-bottom:1px dashed var(--em1-border);display:flex;justify-content:space-between;gap:10px">
+        <a href="/notice/1" style="color:var(--em1-text);text-decoration:none">[7~8월] 여름방학 특강 및 시간표 안내</a><span style="color:var(--em1-sub)">2025-07-31</span>
+      </li>
+      <li style="padding:12px 0;border-bottom:1px dashed var(--em1-border);display:flex;justify-content:space-between;gap:10px">
+        <a href="/notice/2" style="color:var(--em1-text);text-decoration:none">상담 예약 방법(카카오채널/네이버예약) 안내</a><span style="color:var(--em1-sub)">2025-07-25</span>
+      </li>
+      <li style="padding:12px 0;display:flex;justify-content:space-between;gap:10px">
+        <a href="/notice/3" style="color:var(--em1-text);text-decoration:none">중·고등 내신 대비반 모집</a><span style="color:var(--em1-sub)">2025-07-10</span>
+      </li>
+    </ul>
+    <a class="em1-btn" href="/notice" style="margin-top:12px">공지 전체보기</a>
+  </div>
+</section>
+
+<!-- ===== Admission (입학 안내) ===== -->
+<section id="admission" class="em1-wrap">
+  <h2 class="em1-title">📚 입학 안내</h2>
+  <div class="em1-subtxt">초등 수학·영어 집중 | 수준별 맞춤 진행 | 상담 후 반편성</div>
+
+  <div class="em1-grid" style="margin-top:14px">
+    <!-- 모집 대상 -->
+    <div class="em1-card">
+      <h3>모집 대상</h3>
+      <p>초등 전체 학년</p>
+      <ul class="em1-bullets">
+        <li>학습 습관 형성 · 기본기 강화</li>
+        <li>과목별 취약 단원 보완</li>
+        <li>진단 결과 기반 반편성</li>
+      </ul>
+    </div>
+
+    <!-- 초등 수학 -->
+    <div class="em1-card">
+      <h3>초등 수학 (수준별 진행)</h3>
+      <p>개념 → 유형 → 적용 → 주간 테스트 루프</p>
+      <ul class="em1-bullets">
+        <li>개별 진단 후 맞춤 커리큘럼</li>
+        <li>오답·서술형 피드백 제공</li>
+        <li>월간 성취 리포트 공유</li>
+      </ul>
+    </div>
+
+    <!-- 영어 -->
+    <div class="em1-card">
+      <h3>영어 (한국선생님 + 원어민)</h3>
+      <p>문법·독해는 체계적으로, 회화는 실전처럼</p>
+      <ul class="em1-bullets">
+        <li>한국인 선생님: 문법/독해/어휘</li>
+        <li>원어민 수업: 발음·스피킹·리스닝</li>
+        <li>레벨 테스트 후 병행 수업</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="em1-cta">
+    <a class="em1-btn kakao" href="https://pf.kakao.com/_YOUR_CHANNEL" target="_blank" rel="noopener">카카오채널 상담</a>
+    <a class="em1-btn naver" href="https://booking.naver.com/your_link" target="_blank" rel="noopener">네이버 예약</a>
+    <a class="em1-btn" href="/programs">과목별 상세보기</a>
+  </div>
+
+  <div class="em1-note">※ 상담 후 레벨진단 → 반편성 → 1주 적응기간 운영</div>
+</section>
+
+<!-- ===== 연락처/위치 ===== -->
+<section class="em1-wrap">
+  <h2 class="em1-title">오시는 길 & 상담</h2>
+  <div class="em1-card">
+    <p style="margin:0 0 6px"><b>주소</b> : 경기도 평택시 소사벌지구 ○○로 (본관/분관)</p>
+    <p style="margin:0 0 10px"><b>전화</b> : 031-xxx-xxxx &nbsp; <b>운영시간</b> : 평일 14:00~22:00, 토 10:00~18:00</p>
+    <div class="em1-cta">
+      <a class="em1-btn kakao" href="https://pf.kakao.com/_YOUR_CHANNEL" target="_blank" rel="noopener">카카오채널 문의</a>
+      <a class="em1-btn naver" href="https://booking.naver.com/your_link" target="_blank" rel="noopener">네이버 예약</a>
+      <a class="em1-btn" href="https://naver.me/YOUR_MAP" target="_blank" rel="noopener">네이버지도 열기</a>
+    </div>
+  </div>
+</section>
+<!-- ===== /EM ONE ACADEMY ===== -->
